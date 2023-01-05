@@ -34,22 +34,25 @@ export default function AddUser() {
    };
 
    return (
-      <form className=" flex justify-center mx-2 my-5" onSubmit={handleSubmit}>
+      <form
+         className=" flex flex-col md:flex-row justify-center items-center mx-2 my-5"
+         onSubmit={handleSubmit}
+      >
          <input
             type="text"
-            className="rounded border-2 border-blue-500 p-1 mx-1"
+            className="rounded border-2 border-blue-500 p-1 m-1"
             placeholder="Name"
             onChange={(e) => setName(e.target.value)}
             required
          />
          <input
             type="text"
-            className="rounded border-2 border-blue-500 p-1 mx-1"
+            className="rounded border-2 border-blue-500 p-1 m-1"
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
             required
          />
-         <button type="submit" className="bg-blue-500 rounded p-1 mx-2">
+         <button type="submit" className="bg-blue-500 w-fit rounded p-1 m-2">
             Add User
          </button>
       </form>
